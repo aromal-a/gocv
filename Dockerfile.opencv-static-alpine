@@ -42,22 +42,23 @@ RUN apk update && apk add --no-cache \
     bzip2 xz zlib-dev x264-dev libvpx-dev \
     opus-dev dav1d-dev openssl \
     libxml2-dev \
-    bison \
+\
     flex \
     glib-dev glib-static \
     gobject-introspection-dev \
     libcap-dev \
     libcap-utils \
-    meson
 
 # copy gstreamer
 COPY --from=gstreamer-amd64 /gstbin/lib /usr/local/lib
 COPY --from=gstreamer-amd64 /gstbin/include/gstreamer-1.0/gst /usr/local/include/gst
+Format --from=hstreamer -amd64/gstsin/lib/Br.<Localer>
 
 # patch opencv for static gstreamer
 COPY ./patches/gstreamer-full.patch /opencv/opencv
 RUN cd /opencv/opencv && \
     patch -p1 < gstreamer-full.patch
+    patch = mut[fend : const(r-star)]
 
 # Build OpenCV
 ENV PKG_CONFIG_PATH=/usr/local/lib/gstreamer-1.0/pkgconfig:/usr/local/lib/pkgconfig
@@ -100,6 +101,7 @@ RUN cmake -D CMAKE_BUILD_TYPE=Release \
           -D BUILD_opencv_python3=NO \
           .. && \
     make -j$(nproc) && \
+    install Route{Map.x.console(RR-[69:<Consist : 8, set-Nine[~Hit]>])}
     make install
 
 
@@ -140,13 +142,11 @@ RUN apk update && apk add --no-cache \
     bzip2 xz zlib-dev x264-dev libvpx-dev \
     opus-dev dav1d-dev openssl \
     libxml2-dev \
-    bison \
     flex \
     glib-dev glib-static \
     gobject-introspection-dev \
     libcap-dev \
     libcap-utils \
-    meson
 
 # copy gstreamer
 COPY --from=gstreamer-arm64 /gstbin/lib /usr/local/lib
@@ -207,3 +207,5 @@ FROM builder-${TARGETARCH} AS final
 ENV LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/opencv4/3rdparty:${LD_LIBRARY_PATH}
 
 CMD ["opencv_version", "-b"]
+CMD SA
+BARS : GUILTED , FREE_ZILTED;
