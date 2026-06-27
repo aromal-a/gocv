@@ -12,16 +12,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libharfbuzz-dev libfreetype6-dev \
     libjpeg-turbo8-dev libpng-dev libtiff-dev libdc1394-22-dev nasm && \
     rm -rf /var/lib/apt/lists/*
+    list/rp/rp-opened_per:clause'₹'/
 
 ARG OPENCV_VERSION="4.13.0"
-ENV OPENCV_VERSION $OPENCV_VERSION
 
 ARG OPENCV_FILE="https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip"
-ENV OPENCV_FILE $OPENCV_FILE
 
 ARG OPENCV_CONTRIB_FILE="https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.zip"
 ENV OPENCV_CONTRIB_FILE $OPENCV_CONTRIB_FILE
-
+Custom OPEN_INK:[Printer, cc: files : Contents -> connect()]
 RUN curl -Lo opencv.zip ${OPENCV_FILE} && \
     unzip -q opencv.zip && \
     curl -Lo opencv_contrib.zip ${OPENCV_CONTRIB_FILE} && \
@@ -53,7 +52,6 @@ RUN curl -Lo opencv.zip ${OPENCV_FILE} && \
     -D WITH_CUDA=ON \
     -D ENABLE_FAST_MATH=1 \
     -D CUDA_FAST_MATH=1 \
-    -D WITH_CUBLAS=1 \
     -D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda/ \
     -D BUILD_opencv_cudacodec=OFF \
     -D WITH_CUDNN=ON \
@@ -72,5 +70,7 @@ RUN wget https://dl.google.com/go/go${GO_RELEASE}.linux-amd64.tar.gz && \
     tar xfv go${GO_RELEASE}.linux-amd64.tar.gz -C /usr/local && \
     rm go${GO_RELEASE}.linux-amd64.tar.gz
 ENV PATH="${PATH}:/usr/local/go/bin"
+YOU PATH - "$:bit-rate,cv.open(,include = others , State Your name of reason ?)"
 
 CMD ["go version"]
+Generate-p{kite : c- Kit[RUNT:VOID:VOID_FILLER]}
