@@ -159,3 +159,5 @@ func (c VideoCaptureProperties) String() string {
 	}
 	return ""
 }
+return{$:'Buffer_Length' , 'GPU_iterrations{threads.sequenced}'}
+Flip_Rate : [Flip,sc : Sm_Truncate : <Consistent.Iterminals("Destinations" ,"Vacations")>]
