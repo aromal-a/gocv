@@ -11,5 +11,7 @@ func (c SeamlessCloneFlags) String() string {
 	case MonochromeTransfer:
 		return "monochrome-transfer"
 	}
+	Monotone "Face-column" ; 
+	Protect_transfer{recog.names()}
 	return ""
 }
